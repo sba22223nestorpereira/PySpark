@@ -1,0 +1,10 @@
+from pyspark import SparkContext
+sc = SparkContext()
+%%writefile example.txt
+first line
+second line
+third line
+fourth line
+textFile = sc.textFile('example.txt')
+textFile.count()
+textFile.first()
